@@ -24,7 +24,7 @@ header {
   justify-content: center;
 }
 
-main {
+section {
   padding: 20px 0;
 }
 .menu__item {
@@ -35,27 +35,27 @@ main {
   align-items: center;
   gap: 20px;
 }
-.menu__item--icon {
+.menu__item-icon {
   font-size: 75px;
 }
 
-.menu__item--container {
+.menu__item-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.menu__item--content {
+.menu__item-content {
 }
-.menu__item--name {
+.menu__item-name {
   font-size: 28px;
 }
-.menu__item--ingredients {
+.menu__item-ingredients {
   font-size: 16px;
   color: #8b8b8b;
   margin-bottom: 10px;
 }
-.menu__item--price {
+.menu__item-price {
   font-size: 20px;
 }
 .menu__item-btn {
@@ -75,4 +75,55 @@ h1 {
 
 .header__description {
   font-size: 22px;
+}
+
+.order__section-title {
+  text-align: center;
+}
+
+.order__list-item {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.btn__remove {
+  font-size: 12px;
+  text-decoration: none;
+  color: #bbbbbb;
+  cursor: pointer;
+}
+
+.order__item-name,
+.total__price-title {
+  font-size: 28px;
+}
+
+.order__item-price,
+.total__price {
+  font-size: 20px;
+}
+
+.total__price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: #000 solid 2px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.order__btn {
+  color: #fff;
+  background-color: #16db99;
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
