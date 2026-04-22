@@ -4,6 +4,11 @@ const menuContainer = document.getElementById("menu-container");
 const orderSection = document.querySelector(".order__section");
 const orderList = document.querySelector(".order__list");
 const totalPriceSection = document.querySelector(".total__price");
+const payBtn = document.querySelector(".pay__btn");
+const orderBtn = document.querySelector(".order__btn");
+const modal = document.querySelector(".modal");
+const successMessage = document.querySelector(".success__message");
+const paymentNameInput = document.querySelector("#payment-name");
 
 let totalPrice = 0;
 
@@ -39,7 +44,7 @@ menuContainer.addEventListener("click", function (e) {
     }
 
     orderList.innerHTML += `<div class="order__list-item">
-                                <p class="order__item-name">${targetItem.name} <span class="btn__remove">remove</span></p>
+                                <p class="order__item-name">${targetItem.name} <span class="remove__btn">remove</span></p>
                                 <p class="order__item-price">$${targetItem.price}</p>
                             </div>`;
 
@@ -49,7 +54,7 @@ menuContainer.addEventListener("click", function (e) {
 });
 
 orderList.addEventListener("click", function (e) {
-  if (e.target.classList.contains("btn__remove")) {
+  if (e.target.classList.contains("remove__btn")) {
     const targetItem = e.target.closest(".order__list-item");
 
     const targetItemPrice = Number(
@@ -66,4 +71,17 @@ orderList.addEventListener("click", function (e) {
       orderSection.classList.add("hidden");
     }
   }
+});
+
+orderBtn.addEventListener("click", function () {
+  modal.classList.remove("hidden");
+});
+
+payBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  successMessage.textContent = `Thanks, ${paymentNameInput.value}! Your order is on its way!`;
+
+  modal.classList.add("hidden");
+  orderSection.classList.add("hidden");
 });

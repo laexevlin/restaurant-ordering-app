@@ -31,6 +31,26 @@
         </div>
       </section>
     </main>
+    <div class="modal hidden">
+      <h3>Enter card details</h3>
+      <form class="payment__form">
+        <input
+          id="payment-name"
+          type="text"
+          placeholder="Enter your name"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Enter your card number"
+          maxlength="19"
+          required
+        />
+        <input type="text" placeholder="Enter CVV" maxlength="4" required />
+        <button type="submit" class="pay__btn">Pay</button>
+      </form>
+    </div>
+    <div class="success__message"></div>
     <script src="index.js" type="module"></script>
   </body>
 </html>
